@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewTripActivity"
+    android:background="#00ffff"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp">
+
+
+    <ImageView
+        android:id="@+id/trip_image_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="360dp"
+        android:src="@drawable/imagepreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trip_location_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/view_trip_large_margin"
+        android:layout_marginEnd="8dp"
+        android:textSize="@dimen/trip_title_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_image_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_name_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/trip_name_margin_start"
+        android:layout_marginTop="@dimen/trip_name_margin_top"
+        android:layout_marginEnd="8dp"
+        android:textSize="@dimen/trip_name_size"
+        app:layout_constraintEnd_toStartOf="@+id/trip_type_viewTrip"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_location_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_type_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/trip_type_margin_top"
+        android:layout_marginEnd="@dimen/trip_type_margin_end"
+        android:textSize="@dimen/trip_type_size"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_location_viewTrip" />
+
+    <RatingBar
+        android:id="@+id/trip_rating_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/rating_bar_margin_top"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_type_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_start_date_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/start_date_margin_start"
+        android:textSize="@dimen/start_date_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_rating_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_end_date_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/end_date_margin_top"
+        android:layout_marginEnd="@dimen/end_date_margin_end"
+        android:textSize="@dimen/end_date_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_rating_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_price_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/price_margin_start"
+        android:layout_marginTop="@dimen/price_margin_top"
+        android:layout_marginEnd="8dp"
+        android:textSize="@dimen/price_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_start_date_viewTrip" />
+
+    <ImageView
+        android:id="@+id/arrow_vieTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/arrow_margin_top"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/trip_end_date_viewTrip"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/trip_start_date_viewTrip"
+        app:layout_constraintTop_toBottomOf="@+id/trip_rating_viewTrip"
+        app:srcCompat="@drawable/ic_arrow_forward" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Gezi Uygulaması</string>
+    <string name="drawer_home">Home</string>
+    <string name="drawer_favourite">Favourite</string>
+    <string name="drawer_info">About us</string>
+    <string name="drawer_contact">Contact us</string>
+    <string name="drawer_share">Share</string>
+    <string name="drawer_send">Send</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="close_drawer">Close navigation drawer</string>
+    <string name="drawer_sign_out">Sign out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="destination">Destination</string>
+    <string name="trip_type">Trip Type</string>
+    <string name="city_break">City break</string>
+    <string name="mountains">Mountains</string>
+    <string name="seaside">Seaside</string>
+    <string name="price_tl">Fiyat (0 TL)</string>
+    <string name="start_date">Start Date</string>
+    <string name="date_format">DD/MM/YYYY</string>
+    <string name="end_date">End Date</string>
+    <string name="rating">Rating</string>
+    <string name="gallery_photo">Gallery photo</string>
+    <string name="select">SELECT</string>
+    <string name="take_photo">Take photo</string>
+    <string name="save">SAVE</string>
+    <string name="navigation_header">Navigation header</string>
+</resources>

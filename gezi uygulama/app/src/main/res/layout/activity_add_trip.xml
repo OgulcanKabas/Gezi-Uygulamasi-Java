@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrEditTripActivity"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/add_trip_margin"
+    android:layout_marginTop="@dimen/add_trip_margin"
+    android:layout_marginRight="@dimen/add_trip_margin"
+    android:layout_marginBottom="@dimen/add_trip_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/add_trip_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gezilen Yer"
+            android:textStyle="bold"
+            android:textSize="@dimen/add_trip_text_size" />
+
+        <EditText
+            android:id="@+id/trip_name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_info_details"
+            android:layout_marginBottom="@dimen/add_trip_margin" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Açıklama"
+            android:textStyle="bold"
+            android:textSize="@dimen/add_trip_text_size"/>
+
+        <EditText
+            android:id="@+id/destination_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_myplaces"
+            android:layout_marginBottom="@dimen/add_trip_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gezilen Yer "
+            android:textStyle="bold"
+            android:textSize="@dimen/add_trip_text_size"/>
+
+        <RadioGroup
+            android:id="@+id/trip_type_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/add_trip_margin">
+
+            <RadioButton
+                android:id="@+id/city_break_radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Şehir"
+                android:layout_marginRight="@dimen/radio_button_margin"/>
+
+            <RadioButton
+                android:id="@+id/seaside_radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sahil"
+                android:layout_marginRight="@dimen/radio_button_margin"/>
+
+            <RadioButton
+                android:id="@+id/mountains_radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dağlar"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/seek_bar_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/price_tl"
+            android:textStyle="bold"
+            android:textSize="@dimen/add_trip_text_size"/>
+
+        <SeekBar
+            android:id="@+id/price_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/seekbar_margin"
+            android:layout_marginLeft="@dimen/seekbar_margin"
+            android:layout_marginBottom="@dimen/add_trip_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/add_trip_button_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Başlangıç Tarihi"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_trip_text_size"/>
+
+            <Button
+                android:id="@+id/start_date_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnStartDatePickerOnClick"
+                android:hint="@string/date_format"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/add_trip_button_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bitiş Tarihi"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_trip_text_size"/>
+
+            <Button
+                android:id="@+id/end_date_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="btnEndDatePickerOnClick"
+                android:hint="@string/date_format"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textStyle="bold"
+            android:textSize="@dimen/add_trip_text_size"/>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/add_trip_button_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Galeriden Seç"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_trip_text_size"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/select"
+                android:onClick="btnSelectPhotoOnClick"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/add_trip_button_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Normal Seç"
+                android:textStyle="bold"
+                android:textSize="@dimen/add_trip_text_size"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/select"
+                android:onClick="btnTakePhotoOnClick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/image_path_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/save_trip_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/save_button_layout_height"
+        android:text="Kaydet"
+        android:textColor="@color/white"
+        android:background="@color/save_button_colour"
+        android:layout_marginBottom="@dimen/add_trip_button_margin"
+        android:layout_marginTop="@dimen/save_button_margin_top"
+        android:onClick="btnSaveOnClick"/>
+
+
+
+
+
+</LinearLayout>
